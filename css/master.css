@@ -4,7 +4,7 @@ body{
   justify-content: center;
   min-height: 100vh;
   min-width: 100%;
-  background: linear-gradient(rgba(255, 255, 0, 0.5), rgba(0, 255, 255, 0.5));
+  background: linear-gradient(rgba(255, 255, 0, 1), rgba(0, 255, 255, 1));
 }
 
 section{
@@ -18,9 +18,17 @@ header, footer{
   padding: 1em;
   text-align: center;
   background-color: rgba(255, 255, 255, 0.7);
-    box-shadow: 0px 0px 7px 1px rgba(0,0,0,0.5);
+  box-shadow: 0px 0px 7px 1px rgba(0,0,0,0.5);
 }
 
 div{
   background-color: rgba(255, 255, 255, 0.5);
+}
+
+div header, div footer{
+  box-shadow: none;
+}
+
+h2{
+  color: rgba(0, 0, 0, 0.5);
 }
