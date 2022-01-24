@@ -1,22 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Raleway:wght@600&display=swap');
+
+:root{
+  --primary-color:rgb(255,255,0);
+}
+
 .lienzo{
   display: grid;
   grid-template: repeat(3,1fr) / repeat(10,1fr);
   grid-gap: 0.5em;
   perspective: 1000px;
+  z-index: 1;
 }
 
 .modulo{
+  display: flex;
+  flex-direction: column;
   position: relative;
-  padding: 1em;
-  border: 1px solid white;
-  box-shadow: 0px 0px 7px 1px rgba(100,100,100,0.5);
-  background-color: rgba(255,255,255,0,5);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.5);
+  background: rgba(255,255,255,0.05);
   border-radius: 0.5em;
-  transition: transform .5s;
+  transition: all .5s;
+  overflow: hidden;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+
+.modulo>.cabecera{
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.modulo>.contenido{
+  text-align: left;
+  flex-grow: 1;
+}
+.modulo>.pie{
+  font-size: 0.8em;
+  color: white;
+  padding: 0.2em;
+  background-color: rgb(255,255,255);
 }
 
 .modulo.voltear{
   transform: rotateY(180deg);
+  background: rgba(255,255,255,0.9);
 }
 
 .asociaciones-clave{
@@ -54,4 +83,9 @@
 .fuentes-de-ingresos{
   grid-column: span 5 / 11;
   grid-row-start: span 2;
+}
+
+.btn{
+  padding: 0.2em;
+  cursor: pointer;
 }
